@@ -14,6 +14,8 @@ app.use(cors({
     origin: '*', // Replace with your frontend URL
     methods: ['GET', 'POST', 'OPTIONS'] // Allowed methods
 }));
+app.options('/contact', cors()); // Preflight handling for contact route
+
 // ================================================================
 
 app.get("/", (req, res)=>{
