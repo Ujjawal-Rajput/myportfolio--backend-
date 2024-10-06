@@ -12,7 +12,7 @@ app.use(express.json());
 // OR Restrict to specific origin (e.g., your frontend running on port 3000)
 app.use(cors({
     origin: '*', // Replace with your frontend URL
-    methods: ['GET', 'POST'], // Allowed methods
+    methods: ['GET', 'POST', 'OPTIONS'] // Allowed methods
 }));
 // ================================================================
 
