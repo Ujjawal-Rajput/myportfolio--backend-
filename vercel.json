@@ -9,11 +9,11 @@
     "routes": [
       {
         "src": "/",
-        "dest": "/api/index"
+        "dest": "/"
       },
       {
         "src": "/contact",
-        "dest": "/api/contact"
+        "dest": "/contact"
       }
     ]
 }
