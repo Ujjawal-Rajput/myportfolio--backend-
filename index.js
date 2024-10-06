@@ -8,11 +8,11 @@ app.use(express.json());
 
 
 // ================================================================
-// app.use(cors());  // Allows all origins (be cautious in production)
+app.use(cors());  // Allows all origins (be cautious in production)
 // OR Restrict to specific origin (e.g., your frontend running on port 3000)
-app.use(cors({
-    origin: 'http://localhost:5173/' // Replace with your frontend URL
-}));
+// app.use(cors({
+//     origin: 'http://localhost:5173/' // Replace with your frontend URL
+// }));
 // ================================================================
 
 app.get("/", (req, res)=>{
