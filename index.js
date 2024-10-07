@@ -7,6 +7,19 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 
+const whitelist = process.env.CORS_ORIGIN
+  ? JSON.parse(process.env.CORS_ORIGIN)
+  : ["*"];
+  
+app.use(
+    cors({
+      origin: whitelist,
+      credentials: true,
+      maxAge: 14400,
+    })
+  );
+
+
 // ================================================================
 app.use(cors());  // Allows all origins (be cautious in production)
 // OR Restrict to specific origin (e.g., your frontend running on port 3000)
